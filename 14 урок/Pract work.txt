@@ -1,0 +1,90 @@
+
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <windows.h>
+#include <list>
+
+using namespace std;
+
+struct date {
+	int day;
+	string month;
+	int year;
+};
+
+struct phone {
+	string phoneNumber;
+	string brand;
+	string model;
+	string color;
+	date dateCreate;
+};
+list<phone> phoneBook;
+
+void createNewPhone() {
+	phone newPhone;
+	cout << "Enter phone number ->_";
+	cin >> newPhone.phoneNumber;
+
+	cout << "Enter phone brand ->_";
+	cin >> newPhone.brand;
+
+	cout << "Enter phone model ->_";
+	cin >> newPhone.model;
+
+	cout << "Enter phone color ->_";
+	cin >> newPhone.color;
+	phoneBook.push_back(newPhone);
+}
+
+void showPhones() {
+	for (phone item: phoneBook)
+	{
+		cout << "Phone number: " << item.phoneNumber << endl;
+		cout << "Phone brand: " << item.brand << endl;
+		cout << "Phone model: " << item.model << endl;
+		cout << "Phone color: " << item.color << endl;
+	}
+}
+
+int main()
+{
+	/*date dc = { 12, "September", 2017 };
+	phone myPhone = {
+		"+380960621486",
+		"Apple",
+		"iPhone X"
+		"space gray"
+	};
+
+	const int size = 10;
+	int numbers[size];
+	phone contactBook[size];
+
+	cout << myPhone.phoneNumber << endl;
+	cout << myPhone.brand << endl;
+	cout << myPhone.model << endl;
+	cout << myPhone.color << endl;
+*/
+
+
+	/*list<int> listNumbers = { 1,1,1,1,1 };
+
+	listNumbers.push_back(23);
+
+	for (int item : listNumbers) {
+		cout << item << endl;
+	}
+*/
+
+	createNewPhone();
+	createNewPhone();
+	createNewPhone();
+
+	showPhones();
+
+	
+	system("pause");
+	return 0;
+}

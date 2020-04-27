@@ -1,0 +1,110 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+struct product {
+	string name;
+	int count;
+	float price;
+	string description;
+	string location;
+	bool isAvalable;
+};
+
+struct date {
+	int day;
+	string mounth;
+	int year;
+};
+
+struct person {
+	string fullName;
+	string email;
+	string phoneNumber;
+	date birthday;
+}myPerson2;
+
+struct {
+	int day;
+	int year;
+	string mounth;
+}x,y,a;
+
+
+int main() {
+
+	/*x.day = 23;
+	x.mounth = "September";*/
+
+	product myProduct = {"Milk", 5, 25, "it is the best MILK", "Rivne", true};
+	cout << "Name product: " << myProduct.name << endl;
+
+	product newProduct;
+
+	cout << "Enter name ->_";
+	cin >> newProduct.name;
+
+	cout << "Enter price ->_";
+	cin >> newProduct.price;
+
+	cout << "Enter products count ->_";
+	cin >> newProduct.count;
+
+	cout << "Enter desription ->_";
+	cin >> newProduct.description;
+
+	cout << "Enter avalable (1 - Yes or 0 - No) ->_";
+	cin >> newProduct.isAvalable;
+
+	cout << "Enter location ->" << endl;
+	cin >> newProduct.location;
+	
+
+
+
+
+
+
+
+
+	//date bt = { 3,"september",1970 };
+	//
+	//person me = {
+	//	"Andrii Riabii Sergiyovich",
+	//	"cuanid236316@gmail.com",
+	//	"+380954166765",
+	//	bt
+	//};
+
+	//cout << "Name: " << me.fullName << endl;
+	//cout << "Email: " << me.email << endl;
+	//cout << "Phone number: " << me.phoneNumber << endl;
+
+	//cout << "Birthday: " << 
+	//	me.birthday.day << " " <<
+	//	me.birthday.mounth << " " <<
+	//	me.birthday.year << endl;
+
+
+/*
+	date now = {12, "Лютий", 2020};
+
+	date* ptrNow = &now;
+
+	cout << ptrNow->day << endl;
+	cout << ptrNow->mounth << endl;*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+	return 0;
+}

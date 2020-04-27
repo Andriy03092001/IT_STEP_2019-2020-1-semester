@@ -1,0 +1,91 @@
+#include<iostream>
+#include<fstream>
+#include<string>
+
+using namespace std;
+
+int main() {
+
+	//fstream - універсальний
+	//ofstream - запис у файл
+	//ifstream - читання з файлу
+	//
+	//ofstream fout;
+	//string fileName = "ITSTEP.txt";
+	////cin >> fileName;
+	//fout.open(fileName, fstream::app);
+	//
+	//bool isOpen = fout.is_open();
+	//if (isOpen == false) {
+	//	cout << "Error: File not open!" << endl;
+	//}
+	//else {
+	///*	cout << "File open!" << endl;
+	//	fout << "Andrii" << endl;
+	//	fout << "Riabii" << endl;
+	//	fout << "cuandi236316@gmail.com" << endl;
+	//*/	
+	////fout << "Okey" << endl;
+	//	string text;
+	//	cout << "Enter name->_";
+	//	cin >> text;
+	//	fout << text<<"\n";
+	//}
+
+	//fout.close();
+
+	string fileName = "ITSTEP.txt";
+
+	ifstream fin;
+	fin.open(fileName);
+
+	bool isOpen = fin.is_open();
+	if (isOpen == false) {
+		cout << "Error: File not opend!" << endl;
+	}
+	else {
+		cout << "File opend!" << endl;
+	
+		//1. По символах
+		//char data1;
+		//while (fin.get(data1))
+		//{
+		//	cout << data1;
+		//}
+
+
+		//2.До пробілу
+		//string data2;
+		//while (!fin.eof())
+		//{
+		//	data2 = "";
+		//	fin >> data2;
+		//	cout << data2 << endl;
+		//}
+
+
+		//3. ***Цілий рядок
+		//string data3;
+		//while (!fin.eof())
+		//{
+		//	data3 = "";
+		//	getline(fin,data3);
+		//	cout << data3 << endl;
+		//}
+
+		//4. Цілий рядок (Але маєм обмеження)
+		/*char data4[50];
+		while (!fin.eof()) {
+			fin.getline(data4, 50);
+			for (int i = 0; i < 50; i++)
+			{
+				cout << data4[i];
+			}
+		}*/
+
+		
+
+	}
+
+	return 0;
+}
